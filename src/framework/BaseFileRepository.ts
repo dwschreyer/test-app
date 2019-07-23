@@ -1,10 +1,7 @@
 import IRepository from "./IRepository";
 import headerJson from '../data/header.json'
 import Urls from "./urls";
-import {injectable, inject} from "tsyringe";
 
-
-@injectable()
 export default class BaseFileRepository implements IRepository {
 
     async getData<T>(path: string): Promise<T> {
