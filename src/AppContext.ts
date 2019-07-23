@@ -1,3 +1,12 @@
+
+export enum Environment {
+    devTest,
+    devStart,
+    Test,
+    Uat,
+    Prod
+}
+
 export default abstract class AppContext {
-    static isTest: boolean = false;
+    static environment: Environment = Environment.devTest;
 }
