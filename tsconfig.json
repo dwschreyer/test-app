@@ -21,6 +21,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
+  "exclude": [
+    "src/data",
+    "src/framework/BaseFileRepository.ts"
+  ],
   "include": [
     "src"
   ]

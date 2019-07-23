@@ -1,7 +1,7 @@
 import IRepository from "../../framework/IRepository";
 import IHeader from "./IHeader";
 import RepositoryFactory from "../../framework/RepositoryFactory";
-import Urls from "../../framework/urls";
+import Urls from "../../framework/Urls";
 
 export default class HeaderRepository {
 

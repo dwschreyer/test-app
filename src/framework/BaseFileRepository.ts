@@ -1,6 +1,6 @@
 import IRepository from "./IRepository";
 import headerJson from '../data/header.json'
-import Urls from "./urls";
+import Urls from "./Urls";
 
 export default class BaseFileRepository implements IRepository {
 
@@ -14,8 +14,8 @@ export default class BaseFileRepository implements IRepository {
 
         }
 
-        console.log("JSON", json);
+        console.log("BaseFileRepository", json);
 
-        return <T><unknown>json;
+        return json as unknown as T;
     }
 }
