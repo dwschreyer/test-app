@@ -2,7 +2,7 @@ import IRepository from "./IRepository";
 import headerJson from '../data/header.json'
 import Urls from "./Urls";
 
-export default class BaseFileRepository implements IRepository {
+export default class BaseDevStartRepository implements IRepository {
 
     async getData<T>(path: string): Promise<T> {
 
@@ -14,7 +14,7 @@ export default class BaseFileRepository implements IRepository {
 
         }
 
-        console.log("BaseFileRepository", json);
+        console.log("BaseDevStartRepository", json);
 
         return json as unknown as T;
     }

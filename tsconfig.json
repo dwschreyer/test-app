@@ -23,7 +23,7 @@
   },
   "exclude": [
     "src/data",
-    "src/framework/BaseFileRepository.ts"
+    "src/framework/BaseDevTestRepository.ts"
   ],
   "include": [
     "src"

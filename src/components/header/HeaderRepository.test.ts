@@ -1,11 +1,10 @@
 import HeaderRepository from "./HeaderRepository";
-import AppContext from "../../AppContext";
+import AppContext, { Environment } from "../../AppContext";
 
 describe("All the Header Tests", () => {
 
     beforeAll(() => {
-        AppContext.isTest = true;
-        expect(AppContext.isTest).toBe(true);
+        AppContext.environment = Environment.devTest;
     });
 
 

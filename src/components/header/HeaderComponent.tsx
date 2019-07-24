@@ -2,26 +2,37 @@ import React from 'react';
 import HeaderRepository from './HeaderRepository';
 import IHeader from './IHeader';
 
-export interface ReviewAllocationComponentState {
-
+export interface HeaderComponentState {
+    isLoading: boolean;
+    header: IHeader | null;
 }
 
-export default class ReviewAllocationComponent extends React.Component<any, IHeader> {
+export default class HeaderComponent extends React.Component<any, HeaderComponentState> {
+
+    constructor(props: any) {
+        super(props);
+
+        this.state = {
+            isLoading: true,
+            header: null
+        }
+    }
 
     componentDidMount() {
+
         var rep = new HeaderRepository();
-        var header = rep.GetHeader()
-            .then(a => {
-                this.setState(a);
+        rep.GetHeader()
+            .then(response => {
+                this.setState({ isLoading: false, header: response });
             });
     }
 
     render() {
-        if(!this.state) return null; 
+        if(this.state.isLoading || !this.state.header) return null; 
 
         return <>
             <header>
-                <p>This is the header title: {this.state.title}</p>
+                <p>{this.state.header.title}</p>
             </header>
         </>;
     }

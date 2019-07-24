@@ -6,15 +6,17 @@ export default abstract class RepositoryFactory {
 
     public static async create(): Promise<IRepository> {
 
+        console.log("ENVIRONMENT", AppContext.environment);
+
         let dynImport: any = {};
-        let repository: IRepository = <IRepository>{};
+        let repository: IRepository = {} as IRepository;
         switch (AppContext.environment) {
             case Environment.devTest:
-                dynImport = await import("./BaseFileRepository");
+                dynImport = await import("./BaseDevTestRepository");
                 repository = Object.create(dynImport.default.prototype);
                 break;
             case Environment.devStart:
-                dynImport = await import("./BaseFileRepository");
+                dynImport = await import("./BaseDevStartRepository");
                 repository = Object.create(dynImport.default.prototype);
                 break;
             default:
