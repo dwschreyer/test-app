@@ -14,10 +14,12 @@ export default abstract class RepositoryFactory {
             case Environment.devTest:
                 dynImport = await import("./BaseDevTestRepository");
                 repository = Object.create(dynImport.default.prototype);
+                repository.init();
                 break;
             case Environment.devStart:
                 dynImport = await import("./BaseDevStartRepository");
                 repository = Object.create(dynImport.default.prototype);
+                repository.init();
                 break;
             default:
                 repository = new BaseApiRepository();

@@ -5,7 +5,7 @@ import HeaderComponent from './components/header/HeaderComponent';
 const App: React.FC = () => {
   return (
     <div className="App">
-      <HeaderComponent />
+      <HeaderComponent parent="APP" />
     </div>
   );
 }

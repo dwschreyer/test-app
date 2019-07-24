@@ -1,15 +1,19 @@
 import IRepository from "./IRepository";
-import headerJson from '../data/header.json'
+//import headerJson from '../../public/data/header.json'
 import Urls from "./Urls";
 
 export default class BaseDevTestRepository implements IRepository {
+
+    init() {
+        
+    }
 
     async getData<T>(path: string): Promise<T> {
 
         let json = {};
         switch(path) {
             case Urls.headerPath:
-                json = headerJson;
+                //json = headerJson;
                 break;
 
         }
