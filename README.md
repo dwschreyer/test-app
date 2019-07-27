@@ -1,4 +1,25 @@
+
+
+## Purpose
+
+This is a test react all to show off the following ideas:
+
+- Jest Testing
+    * Automatically run tests for files that have changed.
+    * Import the `.json` files for the mock dat.
+    * Work out how the `setupTests.ts` works.
+    * Spy on the `fetch` method to respond with the required import. 
+- Starting the App
+    * Automatically reload the UI as components are developed.
+    * Using `fetch` to load the `.json` files.
+
+## Bootstrapping the App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Created: `npx create-react-app test-app --typescript`
+
+
 
 ## Available Scripts
 
