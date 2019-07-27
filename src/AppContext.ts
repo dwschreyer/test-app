@@ -1,19 +1,17 @@
-export enum Environment {
-    devTest,
-    devStart,
-    Test,
-    Uat,
-    Prod
-}
+import Urls from "./framework/Urls";
 
-export default abstract class AppContext {
+class AppContext {
 
-    static environment: Environment = Environment.devTest;
-
-    static setupEnv() {
-        if(process.env.REACT_APP_ENVIRONMENT) {
-            AppContext.environment = (Environment as any)[process.env.REACT_APP_ENVIRONMENT];
-        }
-
+    public constructor(useApi: boolean = true) {
+        this.UseApi = useApi;
+        this.Urls = new Urls(useApi);
     }
+
+    public readonly UseApi: boolean;
+    public readonly Urls: Urls;
+
+    
 }
+
+const appContext: AppContext = new AppContext(false);
+export default appContext;

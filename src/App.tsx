@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
-import HeaderComponent from './components/header/HeaderComponent';
+import HeaderComponent from "./components/HeaderComponent";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <HeaderComponent parent="APP" />
+      <HeaderComponent />
     </div>
   );
 }

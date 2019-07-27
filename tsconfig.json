@@ -17,16 +17,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "jsx": "preserve"
   },
-  "exclude": [
-    "src/data",
-    "src/framework/BaseDevTestRepository.ts",
-    "public/data"
-  ],
   "include": [
     "src"
+  ],
+  "exclude": [
+    "public/data"
   ]
 }
