@@ -1,12 +1,7 @@
 import React from "react";
+import GenericState from "../models/GenericState";
 
-
-export interface GenericState<TStateModel> {
-    isLoading: boolean;
-    model: TStateModel;
-}
-
-export default class GenericComponent<TPropsModel, TStateModel> extends React.Component<TPropsModel, GenericState<TStateModel>> {
+export default abstract class GenericComponent<TPropsModel, TStateModel> extends React.Component<TPropsModel, GenericState<TStateModel>> {
 
     constructor(props: TPropsModel) {
         super(props);
@@ -17,7 +12,7 @@ export default class GenericComponent<TPropsModel, TStateModel> extends React.Co
         }
     }
 
-    stateInvalid() : boolean {
-        return (this.state.isLoading || !this.state.model); 
-    }
+    // stateInvalid() : boolean {
+    //     return (this.state.isLoading || !this.state.model); 
+    // }
 }

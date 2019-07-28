@@ -1,17 +1,16 @@
 import Urls from "./framework/Urls";
+import { Environment } from "./models/enums";
 
-class AppContext {
+export class AppContext {
 
-    public constructor(useApi: boolean = true) {
-        this.UseApi = useApi;
-        this.Urls = new Urls(useApi);
+    public init(environment: Environment) {
+        this.Environment = environment;
+        this.Urls = new Urls(environment);
     }
 
-    public readonly UseApi: boolean;
-    public readonly Urls: Urls;
-
-    
+    public Environment: Environment = Environment.devStart;
+    public Urls: Urls = {} as Urls;
 }
 
-const appContext: AppContext = new AppContext(false);
+const appContext: AppContext = new AppContext();
 export default appContext;
