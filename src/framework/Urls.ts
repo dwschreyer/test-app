@@ -12,6 +12,7 @@ export default class Urls {
 
     private setUrl(resourceName: string): string {
 
+        console.log("AAAAAAAAAAAA", resourceName);
         var response: string = "";
         switch (this.environment) {
             case Environment.devTest:

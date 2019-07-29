@@ -13,4 +13,5 @@ export class AppContext {
 }
 
 const appContext: AppContext = new AppContext();
+appContext.init(appContext.Environment);
 export default appContext;

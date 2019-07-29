@@ -13,7 +13,7 @@ export default class HeaderComponent extends GenericComponent<any, IResponse> {
     }
 
     render() {
-
+        
         if (this.state.isLoading) return null;
         let model = this.state.model;
 

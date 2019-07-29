@@ -1,4 +1,5 @@
-import { GenericState } from "./GenericComponent";
+import GenericState from "../models/GenericState";
+
 
 export default class GenericRepository {
 
